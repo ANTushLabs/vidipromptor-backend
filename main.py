@@ -30,7 +30,8 @@ app.add_middleware(
 
 # --- DIRECTORIES ---
 UPLOAD_DIR = os.path.join(APP_DATA_DIR, "web_uploads")
-DESKTOP_OUTPUT_DIR = os.path.join(os.path.expanduser("~"), "Desktop", "VidiPromptor_Output")
+# Use a cloud-friendly internal directory for outputs instead of Desktop
+DESKTOP_OUTPUT_DIR = os.path.join(APP_DATA_DIR, "outputs")
 THUMBS_DIR = os.path.join(APP_DATA_DIR, "thumbs")
 
 if not os.path.exists(UPLOAD_DIR): os.makedirs(UPLOAD_DIR)
